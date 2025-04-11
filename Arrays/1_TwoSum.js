@@ -3,11 +3,13 @@
  * @param {number} target
  * @return {number[]}
  */
-//Explicação : eu possuo um número inicial(nums) e um número alvo(target), eu preciso fazer com que meu número inicial somado ao próximo número do array seja mostrado no resultado como meu número alvo, porém para descobrir qual número mais o meu inicial seria o meu resultado, com isso precisei ter dois indices e no final subtrair o indice inicial menos o alvo, para descobrir o meu segundo indice.
+//Explicação : eu possuo um número inicial(nums) e um número alvo(target), eu preciso fazer com que meu número inicial somado ao próximo número do array seja mostrado no resultado como meu número alvo, 
+//porém para descobrir qual número mais o meu inicial seria o meu resultado, com isso precisei ter dois indices e no final subtrair o indice inicial menos o alvo, para descobrir o meu segundo indice.
 
 var twoSum = function(nums, target) {
     for(let i = 0; i < nums.length; i++){ // indice inicial na posição 0, se ele for menor que o tamanho do meu array, entao ele acrescenta 1 a mais a cada vez que ele voltar
-        for(let j = i + 1; j < nums.length; j++){ // indice dois precisa ser somado com o indice inicial 0 + 1, para que nao seja o mesmo indice, e cada vez que ele for menor que o tamanho do array ele acrescenta 1 a mais no valor.
+        for(let j = i + 1; j < nums.length; j++){ // indice dois precisa ser somado com o indice inicial 0 + 1, para que nao seja o mesmo indice, e cada vez que ele for menor que o tamanho do array ele 
+                                                    //acrescenta 1 a mais no valor.
             if(nums[j] === target - nums[i]) // se o indice J(2) for estritamente igual ao alvo - o array na posição do indice i, ele retorna o valor das posiçoes dos indices.
                 return [i,j]
         }
